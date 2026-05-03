@@ -12,7 +12,14 @@ file_a=open('results/CF_freq.fasta', 'w')
 file_a.write("Generation\tFreq_c\tFreq_CC\tFreq_Cc\tFreq_cc\n")
 file_a.write(f"{i}\t{S:.6f}\t{i:.6f}\t{r:.6f}\n")
 for inf in range(100):
-    i=i+i/beta
-    r=i/gama
-    S=S-(i+r)
-    if 
+    if (S-(i+r))>(i+r): #לא ידוע איך להתעסק אם הסכומים זה לא נכון לצורה זאת
+        i=i+i/beta
+        r=i/gama
+        file_a.write(f"{i}\t{S:.6f}\t{i:.6f}\t{r:.6f}\n")
+    else:
+        i=S-(i+r)
+        file_a.write(f"{i}\t{S:.6f}\t{i:.6f}\t{r:.6f}\n")
+if inf<99:
+    r=i
+    i=0
+    file_a.write(f"{i}\t{S:.6f}\t{i:.6f}\t{r:.6f}\n")
