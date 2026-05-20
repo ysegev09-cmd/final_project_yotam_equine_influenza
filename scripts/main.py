@@ -4,7 +4,7 @@ beta=0.1 #יחידות ליום
 gama=0.05 #ימים
 num_sick0=n*(start_sick/100)
 print(num_sick0)
-S=n+num_sick0
+S=n-num_sick0
 i=num_sick0
 r=0
 r=i*gama
