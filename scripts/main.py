@@ -27,3 +27,4 @@ file_a=open('results/CF_freq.fasta', 'w')
 file_a.write("S\ti\tr\n")
 file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
 
+Haracha=sir_projact(n,beta,gama,S,i,r,I_total,r_total)
