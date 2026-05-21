@@ -11,13 +11,7 @@ def  sir_projact(old,new):
     I_total=I_total+i-r
     r_total=r_total+r 
 
-
-
-
-
-
-
-n=200
+n=200   # הגדרת משתנים
 start_sick=25
 beta=0.1 #יחידות ליום
 gama=0.05 #ימים
