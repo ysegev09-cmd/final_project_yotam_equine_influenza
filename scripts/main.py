@@ -27,7 +27,7 @@ for days in range(100):
         file_a.write(f"{S_cunt}\t{i:.6f}\t{r:.6f}\n")
         break
       
-if inf<99:
+if inf<99: # אולי אפשר להעביר את זה אל הלולאה
     r=i
     i=0
     file_a.write(f"{S_cunt}\t{i:.6f}\t{r:.6f}\n")
