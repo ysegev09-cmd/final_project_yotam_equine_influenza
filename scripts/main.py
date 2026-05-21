@@ -15,20 +15,20 @@ file_a=open('results/CF_freq.fasta', 'w')
 file_a.write("S\ti\tr\n")
 file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
 for days in range(100):
-    S=n-(I_total+r_total)
-    i=(bata*i*S)/n
+    S=S-i 
+    i=(beta*i*S)/n
     r=I_total*gama
     if S>i: #לא ידוע איך להתעסק אם הסכומים זה לא נכון לצורה זאת
         I_total=I_total+i-r
         r_total=r_total+r
-        file_a.write(f"{S_cunt}\t{i:.6f}\t{r:.6f}\n")
+        file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
     else:
         i=S-(i+r)
-        file_a.write(f"{S_cunt}\t{i:.6f}\t{r:.6f}\n")
+        file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
         break
       
-if inf<99: # אולי אפשר להעביר את זה אל הלולאה
+if days<99: # אולי אפשר להעביר את זה אל הלולאה
     r=i
     i=0
-    file_a.write(f"{S_cunt}\t{i:.6f}\t{r:.6f}\n")
+    file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
    
