@@ -1,4 +1,10 @@
-def  sir_projact(n,S,i,r,I_total,r_total): # מדמה ההדבקה
+def  sir_projact(n,num_sick0): # מדמה ההדבקה
+    S=n-num_sick0 # חישוב הלא חולים
+    i=num_sick0 # הגדרת הפרמטרים לחישוב
+    r=0
+    I_total=0
+    I_total=I_total+i-r
+    r_total=0
     beta=0.2 #יחידות ליום
     gama=0.01 #ימים
     for days in range(50): # לולאה של כמות הימים 
@@ -16,15 +22,8 @@ def  sir_projact(n,S,i,r,I_total,r_total): # מדמה ההדבקה
 
 n=200   # הגדרת משתנים
 start_sick=25
-num_sick0=n*(start_sick/100)
-S=n-num_sick0
-i=num_sick0
-r=0
-I_total=0
-I_total=I_total+i-r
-r_total=0
+num_sick0=n*(start_sick/100) # חישוב כמה האחוז שאנו נעבוד איתו מהכמות הכוללת
 file_a=open('results/situ_update.py', 'w')
 file_a.write("On_day\tS\tI_total\tr_total\n")
-
-Haracha=sir_projact(n,S,i,r,I_total,r_total)
+Haracha=sir_projact(n,num_sick0)
 file_a.close()
