@@ -1,6 +1,6 @@
 def  sir_projact(n,beta,gama,S,i,r,I_total,r_total):
     for days in range(100):
-    file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
+    file_a.write(f"{days}\t{S:.6f}\t{I_total:.6f}\t{r_total:.6f}\n")
     i=(beta*i*S)/n
     r=I_total*gama
     if S>i: 
