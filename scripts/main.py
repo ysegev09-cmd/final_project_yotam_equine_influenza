@@ -1,15 +1,15 @@
 def  sir_projact(n,beta,gama,S,i,r,I_total,r_total):
     for days in range(100):
-    file_a.write(f"{days}\t{S:.6f}\t{I_total:.6f}\t{r_total:.6f}\n")
-    i=(beta*i*S)/n
-    r=I_total*gama
-    if S>i: 
-        i=s
-    if r>I_total:
-        r=I_total
-    S=S-i 
-    I_total=I_total+i-r
-    r_total=r_total+r 
+        file_a.write(f"{days}\t{S:.6f}\t{I_total:.6f}\t{r_total:.6f}\n")
+        i=(beta*i*S)/n
+        r=I_total*gama
+        if S>i: 
+            i=s
+        if r>I_total:
+            r=I_total
+        S=S-i 
+        I_total=I_total+i-r
+        r_total=r_total+r 
 
 n=200   # הגדרת משתנים
 start_sick=25
