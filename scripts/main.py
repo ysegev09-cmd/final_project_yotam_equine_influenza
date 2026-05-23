@@ -23,7 +23,7 @@ r=0
 r=i*gama
 I_total=I_total=I_total+i-r
 r_total=0
-file_a=open('results/CF_freq.fasta', 'w')
+file_a=open('results/situ_update.py', 'w')
 file_a.write("On_day\tS\tI_total\tr_total\n")
 #file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
 
