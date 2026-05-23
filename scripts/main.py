@@ -11,10 +11,10 @@ def  sir_projact(n,beta,gama,S,i,r,I_total,r_total):
         I_total=I_total+i-r
         r_total=r_total+r 
 
-n=200   # הגדרת משתנים
-start_sick=25
-beta=0.1 #יחידות ליום
-gama=0.05 #ימים
+n=300   # הגדרת משתנים
+start_sick=10
+beta=0.2 #יחידות ליום
+gama=0.0.3 #ימים
 num_sick0=n*(start_sick/100)
 print(num_sick0)
 S=n-num_sick0
