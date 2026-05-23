@@ -5,8 +5,6 @@ def  sir_projact(n,S,i,r,I_total,r_total):
         file_a.write(f"{days}\t{round(S,2):.6f}\t{round(I_total,2):.6f}\t{round(r_total,2):.6f}\n")
         i=(beta*i*S)/n
         r=I_total*gama
-        print(S,i,r)
-        print(n-I_total-r_total)
         if S<i: 
             i=S
             S=0
