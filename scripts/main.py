@@ -7,7 +7,7 @@ def  sir_projact(old,new):
         i=s
     if r>I_total:
         r=I_total
-    S=S-i !
+    S=S-i 
     I_total=I_total+i-r
     r_total=r_total+r 
 
