@@ -1,9 +1,9 @@
-def  sir_projact(old,new):
+def  sir_projact(n,beta,gama,S,i,r,I_total,r_total):
     for days in range(100):
     file_a.write(f"{S}\t{i:.6f}\t{r:.6f}\n")
     i=(beta*i*S)/n
     r=I_total*gama
-    if S>i: #לא ידוע איך להתעסק אם הסכומים זה לא נכון לצורה זאת
+    if S>i: 
         i=s
     if r>I_total:
         r=I_total
