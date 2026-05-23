@@ -4,7 +4,7 @@ def  sir_projact(n,beta,gama,S,i,r,I_total,r_total):
         i=(beta*i*S)/n
         r=I_total*gama
         if S>i: 
-            i=s
+            i=S
         if r>I_total:
             r=I_total
         S=S-i 
