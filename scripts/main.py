@@ -21,6 +21,7 @@ S=n-num_sick0
 i=num_sick0
 r=0
 r=i*gama
+I_total=0
 I_total=I_total+i-r
 r_total=0
 file_a=open('results/situ_update.py', 'w')
