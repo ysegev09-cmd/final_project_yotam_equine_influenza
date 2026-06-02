@@ -21,6 +21,7 @@ def  sir_projact(n,num_sick0): # מדמה ההדבקה
         S=S-i  # עדכון הפרמטרים אשר אנו מחפשים
         I_total=I_total+i-r
         r_total=r_total+r 
+    file_a.write("day max\ti_max\n")
 
 
 n=200   # הגדרת משתנים
