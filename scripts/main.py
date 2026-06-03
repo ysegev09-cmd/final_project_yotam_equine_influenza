@@ -1,4 +1,4 @@
-def  sir_projact(n,num_sick0): # מדמה ההדבקה
+def  sir_projact(n,num_sick0,gama,beta): # מדמה ההדבקה
     S=n-num_sick0 # חישוב הלא חולים
     i=num_sick0 # הגדרת הפרמטרים לחישוב
     r=0
@@ -21,7 +21,8 @@ def  sir_projact(n,num_sick0): # מדמה ההדבקה
         S=S-i  # עדכון הפרמטרים אשר אנו מחפשים
         I_total=I_total+i-r
         r_total=r_total+r 
-    file_a.write("day max\ti_max\n")
+    file_a.write("hakef\tday max\tI_max\tbeta\gamma\tstart sick\tall donkys\n")
+
 
 
 n=200   # הגדרת משתנים
