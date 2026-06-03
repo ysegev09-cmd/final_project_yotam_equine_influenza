@@ -21,8 +21,8 @@ def  sir_projact(n,num_sick0,gama,beta): # מדמה ההדבקה
         S=S-i  # עדכון הפרמטרים אשר אנו מחפשים
         I_total=I_total+i-r
         r_total=r_total+r 
-    file_a.write("hakef\tday max\tI_max\tbeta\gamma\tstart sick\tall donkys\n")
-    file_a.write(f"{(I_total/n)}\t{day_max:.6f}\t{round(i_max,2):.6f}\t{beta:.6f}\t{gama:.6f}\t{num_sick0:.6f}\t{n:.6f}\n")
+    file_a.write("hakef\tday max\tI_max\tbeta\tgamma\tstart sick\tall donkys\n")
+    file_a.write(f"{round(I_total/n,2)}\t{day_max:.6f}\t{round(i_max,2):.6f}\t{beta:.6f}\t{gama:.6f}\t{num_sick0:.6f}\t{n:.6f}\n")
 
 
 
