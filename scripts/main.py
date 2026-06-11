@@ -12,13 +12,12 @@ def  sir_projact(n,num_sick0,gama,beta): # מדמה ההדבקה
         file_a.write(f"{days}\t{round(S,2):.6f}\t{round(sick_today,2):.6f}\t{round(r_total,2):.6f}\n")
         new_infected=(beta*sick_today*S)/n # חישובים של המקדמים
         r=sick_today*gama
-        print(new_infected)
         if S<new_infected: # תנאי לכדי לוודא להמקדם של נדבקים חדשים לא עולה על הכמות שיכולה לחלות
             new_infected=S
         if r>sick_today: # תנאי לוודא שכמות המחלימים לא עולה על הכמות שיכולה להחלים
             r=sick_today
-        if i_max<new_infected:
-            i_max=new_infected
+        if i_max<sick_today:
+            i_max=sick_today
             day_max=days
         S=S-new_infected  # עדכון הפרמטרים אשר אנו מחפשים
         sick_today=sick_today+new_infected-r
@@ -29,11 +28,11 @@ def  sir_projact(n,num_sick0,gama,beta): # מדמה ההדבקה
 
 
 
-n=1000  # הגדרת משתנים
+n=10000  # הגדרת משתנים
 start_sick=5
 num_sick0=n*(start_sick/100) # חישוב כמה האחוז שאנו נעבוד איתו מהכמות הכוללת
-beta=0.75 #יחידות ליום
-gama=0.2 #ימים
+beta=0.5 #יחידות ליום
+gama=0.2#ימים
 file_a=open('results/situ_update.py', 'w')
 file_a.write("On_day\tS\sick_today\tr_total\n")
 Haracha=sir_projact(n,num_sick0,gama,beta)
